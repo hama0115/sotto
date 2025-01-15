@@ -1,0 +1,1100 @@
+@charset "utf-8";
+
+/* 初期スタイル調整 */
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Noto Serif JP",sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #1d1d1d;
+  background-color: #ffffff;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+p {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+ul {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0px;
+  list-style: none;
+}
+
+/* liにもデフォルトでマーカーが付いていたため追加の調整 */
+li,
+ol {
+  list-style: none;
+}
+/* */
+
+figure {
+  margin: 0;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+
+/**********  ヘッダー  **********/
+
+.header {
+  background-color: #f5f5dc;
+}
+
+.header-container {
+  max-width: 1200px;
+  height: 110px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 40px;
+  padding-right: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-logo {
+  display: block;
+  width: 170px;
+}
+
+.toggle-menu-button {
+  display: none;
+}
+
+.site-menu ul{
+  display: flex;
+}
+
+.site-menu ul li {
+  font-size: 20px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.sns-menu {
+  display: flex;
+}
+
+.sns-menu p {
+  font-size: 2rem;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+/**********  --メイン--  **********/
+
+
+/* --トップページのCSS-- */
+
+/* ファーストビューエリア */
+.first-view {
+  height: calc(100vh - 110px);
+  background-image: url(../img/yamamoto.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+/* キャッチフレーズ */
+.catchphrase {
+  text-align: center;
+  font-size: 2rem;
+  margin: 70px 0;
+  line-height: 2;
+}
+
+/* 仕事(HR、映像制作)エリア */
+
+.section-work {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* 見やすい幅を決めて、水平方向中央に揃える */
+  width: 930px;
+  max-width: 90%;
+  margin: 50px auto;
+  /* */
+  padding: 50px 10px;
+  border: 3px solid #98fb98;
+  border-radius: 20px;
+}
+
+.section-work img {
+  width: 350px;
+}
+
+.work-text {
+  max-width: 410px;
+  margin-left: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.work-text p {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+/* リンクボタンの設定(全体) */
+
+.link-button-area {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.link-button {
+  background-color: #f0e68c;
+  display: inline-block;
+  min-width: 180px;
+  line-height: 50px;
+  font-family: "M PLUS 1", serif;
+  font-size: 20px;
+  border-bottom: solid 4px #ffa500;
+}
+
+.link-button:active {
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);
+  border-bottom: none;
+}
+
+.achievements-creation .link-button {
+  min-width: 350px;
+}
+
+.section-work:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.section-work:nth-child(even) .work-text {
+  margin-left: 0px;
+  margin-right: 40px;
+}
+
+/* プロフィール */
+
+.section-profile {
+  background-color: #f5f5f5;
+  padding: 30px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timeline {
+  margin: 30px;
+  position: relative;
+}
+
+/* 擬似要素「線」 */
+.timeline::before {
+  content: '';
+  display: block;
+  width: 2px;
+  height: 260px;
+  background-color: #000;
+  position: absolute;
+  left: -16px;
+}
+
+.timeline li {
+  position: relative;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+/* 擬似要素「丸」 */
+.timeline li::before {
+  content: '◯';
+  background-color: #f5f5f5;
+  margin-right: 10px;
+  position: absolute;
+  left: -25px;
+}
+
+.timeline p {
+  font-size: 1.3rem;
+}
+
+/* 実績 */
+
+.section-achievements {
+  width: 930px;
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 30px 0px;  
+}
+
+.section-achievements h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.section-achievements h3 {
+  font-size: 1.5rem;
+}
+
+.section-achievements h3::after {
+  content: '';
+  display: block;
+  width: 150px;
+  height: 1px;
+  background-color: #000;
+  margin-top: 5px;
+}
+
+.achievements-hr {
+  padding: 30px 0px;
+}
+
+.hr-text {
+  padding-left: 50px;
+}
+
+.hr-text p {
+  font-size: 1.2rem;
+  margin-left: 30px;
+}
+
+.section-achievements .link-button-area {
+  display: block;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.achievements-creation {
+  background-color: #f5f5f5;
+  padding: 30px 50px;
+}
+
+.creation-list {
+  display: flex;
+  padding: 40px 50px 10px 0px;
+  overflow: scroll;
+}
+
+.creation-list li {
+  flex-shrink: 0;
+  width: 300px;
+  margin-left: 60px;
+}
+
+.creation-list li:first-child {
+  margin-left: 0px;
+}
+
+/* 4つ目が正方形の画像なので個別で大きさを変更 */
+.creation-list li:nth-child(4) {
+  width: 160px;
+}
+
+.creation-list li p {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.creation-item:hover {
+  box-shadow: 5px 5px 10px 1px #000000;
+  transform: scale(1.1);
+  transition: .3s;
+}
+
+.achievements-creation p {
+  text-align: center;
+}
+
+/* ----  HR(人事)支援ページ  ---- */
+
+/* 一番上のエリア */
+
+h1 {
+  text-align: center;
+  margin-top: 40px;
+}
+
+h1::after {
+  content: '';
+  display: block;
+  width: 250px;
+  height: 1px;
+  background-color: #000;
+  margin: 10px auto 0;
+}
+
+.top-area {
+  background-color: #e4f0f9;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 40px 0px;
+  padding: 30px;
+}
+
+.top-area img {
+  width: 350px;
+}
+
+.hr-page-text {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 40px;
+}
+
+.hr-page-text p {
+  margin: 10px 0;
+}
+
+/* 仕事内容のエリア */
+
+.work-contents {
+  width: 930px;
+  max-width: 90%;
+  margin: 100px auto;
+}
+
+.work-contents h2 {
+  position: relative;
+}
+
+.work-contents h2::before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 5px;
+  height: 50px;
+  background-color: #98fb98;
+  left: -15px;
+}
+
+.contents-area {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 60px 0px;
+  padding: 0px 20px;
+}
+
+.contents-area:nth-child(odd) {
+  background-color: #f5f5f5;
+  flex-direction: row-reverse;
+  padding: 30px;
+}
+
+.contents-area:nth-child(odd) .contents-text {
+  margin-left: 0;
+  margin-right: 40px;
+}
+
+.contents-area img {
+  width: 350px;
+}
+
+.contents-text {
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 40px;
+}
+
+.contents-text h3::after {
+    content: '';
+    display: block;
+    width: 270px;
+    height: 1px;
+    background-color: #000;
+    margin-top: 8px;
+}
+
+.contents-text p {
+  margin: 10px 0;
+}
+
+.hr-achievements h2 {
+  position: relative;
+}
+
+.hr-achievements h2::before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 5px;
+  height: 50px;
+  background-color: #98fb98;
+  left: -15px;
+}
+
+/* 具体的な実績のエリア */
+
+.hr-achievements {
+  margin-left: 100px;
+}
+
+.hr-achievements h3 {
+  margin-bottom: 10px;
+}
+
+.hr-achievements ul {
+  margin:10px 0 30px 0;
+}
+
+.hr-achievements ul li::before {
+  content: '・';
+}
+
+/* ----  映像制作のページ  ---- */
+
+.creation-page-text {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+}
+
+.creation-page-text {
+  margin: 10px 0;
+}
+
+
+.creation-achievements {
+width: 930px;
+max-width: 90%;
+margin: 0 auto;
+}
+
+.creation-achievements h2 {
+  position: relative;
+}
+
+.creation-achievements h2::before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 5px;
+  height: 50px;
+  background-color: #98fb98;
+  left: -15px;
+}
+
+.cr-achievements-contents {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 40px;
+  padding-bottom: 10px;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.cr-contents-area {
+  flex-shrink: 0;
+  width: 400px;
+}
+
+.cr-contents-area video {
+  max-width: 100%;
+}
+
+.cr-contents-text h3 {
+  font-size: 1.5rem;
+  margin: 5px 0;
+}
+
+.cr-contents-text p {
+  font-size: 1.2rem;
+}
+
+/* --プロフィールのページ-- */
+
+.name-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0;
+}
+
+.name-area iframe {
+  display: block;
+  width: 40%;
+  height: 274px;
+}
+
+.name-area img {
+  width: 400px;
+  height: 230px;
+  margin-left: 20px;
+}
+
+.profile-text-wrapper {
+  width: 930px;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.profile-text {
+  font-size: 1.5rem;
+}
+
+/* 「強み」のエリア */
+
+.strength {
+  background-color: #f5f5dc;
+  padding: 40px 0 60px;
+}
+
+.strength h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.strength-contents {
+  width: 930px;
+  max-width: 90%;
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;  
+}
+
+.st-contents-area {
+  max-width: 320px;
+}
+
+.st-contents-area h3 {
+  text-align: center;
+}
+
+/* 見出しの下線 */
+.st-contents-area h3::after {
+  content: '';
+  display: block;
+  width: 300px;
+  height: 1px;
+  background-color: #000;
+  margin: 10px auto 0;
+}
+
+.st-contents-area p {
+  font-size: 1.2rem;
+}
+
+/*　「得意な環境」のエリア */
+
+.environment {
+  width: 930px;
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 40px 0 100px;
+}
+
+.environment h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.ev-area {
+  display: flex;
+  justify-content: space-around;
+}
+
+.ev-area img {
+  width: 350px;
+}
+
+.ev-area p {
+  width: 350px;
+  display: flex;
+  align-items: center;
+}
+
+/* 「沿革」のエリア */
+
+.big-timeline {
+  background-color: #f5f5f5;  
+  padding: 40px 0 60px;
+}
+
+.big-timeline h2 {
+  text-align: center;
+}
+
+.timeline-text {
+  width: 850px;
+  position: relative;
+  margin: 0 auto;
+  padding-left: 200px;
+  padding-right: 30px;
+}
+
+/* 「線」の擬似要素 */
+.timeline-text::before {
+  content: '';
+  display: block;
+  width: 2px;
+  height: 260px;
+  background-color: #000;
+  position: absolute;
+  top: -5px;
+  left: 140px;
+}
+
+.timeline-text li {
+  font-size: 1.1rem;
+  margin: 50px 0;
+  position: relative;
+}
+
+/* ここから「年」と「◯」の擬似要素 */
+.timeline-text li:first-child::before {
+  content: '2020　◯';
+  background-color: #f5f5f5;
+  position: absolute;
+  left: -130px;
+  font-size: 1.2rem;
+}
+
+.timeline-text li:nth-child(2)::before {
+  content: '2022　◯';
+  background-color: #f5f5f5;
+  position: absolute;
+  left: -130px;
+  font-size: 1.2rem;
+}
+
+.timeline-text li:nth-child(3)::before {
+  content: '2024　◯';
+  background-color: #f5f5f5;
+  position: absolute;
+  left: -130px;
+  font-size: 1.2rem;
+}
+/* 擬似要素おわり */
+
+
+
+/* ----  フッター  ---- */
+
+.footer {
+  background-color: #f5f5dc;
+  padding-top: 35px;
+  padding-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-site-menu ul li a {
+  font-family: "M PLUS 1", serif;
+}
+
+.footer-logo {
+  display: block;
+  width: 170px;
+  margin-top: 50px;
+}
+
+.footer-sns-menu-container {
+  display: flex;
+  margin-top: 30px;
+}
+
+.footer-sns-menu-container p {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.copyright {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+/* ------------  SP用表示  ------------ */
+
+@media (max-width:768px) {
+
+/* ---- SP版ヘッダー ---- */
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    z-index: 10;
+  }
+
+  .header-container {
+    padding-left: 30px;
+    padding-right: 30px;
+    height: 100%;
+    position: relative;
+  }
+
+  .header-logo {
+    width: 80px;
+  }
+
+  .header-icon-list {
+    display: flex;
+    align-items: center;
+  }
+
+  .toggle-menu-button {
+    display: block;
+    width: 40px;
+    height: 34px;
+    background-image: url(../img/icon-menu.png);
+    background-size: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border-width: 1px;
+  }
+
+  .header-site-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    color: #000;
+    background-color: #f5f5dc;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: none;
+  }
+
+  .site-menu ul {
+    display: block;
+    text-align: center;
+  }
+
+  .site-menu li {
+    margin-top: 10px;
+  }
+
+  .header-site-menu.is-show {
+    display: block;
+  }
+
+  .sns-menu p {
+    font-size: 1.5rem;
+    margin-bottom: 0;
+    margin-left: 0;
+  }
+
+
+  /* snsはsp版では非表示 
+  .sns-menu-container {
+    display: none;
+  }
+  */
+
+/* ----  SP版メイン  ---- */
+  .main {
+    padding-top: 50px;
+  }
+
+  /* --SP版トップページ-- */
+
+  .first-view {
+    height: calc(100vh-50px);
+    background-image: url(../img/yamamoto-sp.jpg);
+  }
+
+  .catchphrase {
+    padding: 10px;
+    font-size: 1.3rem;
+    margin: 20px 0px;
+  }
+
+  .section-work {
+    display: block;
+    width: 500px;
+    margin-top: 10px;
+  }
+
+  .section-work img {
+    width: 100%;
+  }
+
+  .work-text {
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .work-text h2 {
+    margin-bottom: 5px;
+  }
+
+  .work-text p {
+    font-size: 1.2rem;
+  }
+
+  .section-work:nth-child(even) .work-text {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .timeline {
+    margin-left: 30px;
+  }
+
+  .timeline li {
+    font-size: 1.1rem;
+  }
+
+  .timeline p {
+    font-size: 1.2rem;
+  }
+
+  .timeline::before {
+    height: 340px;
+  }
+
+  .achievements-creation {
+    padding: 30px 20px;
+  }
+
+  .hr-text {
+    padding-left: 20px;
+  }
+
+  .hr-text p {
+    margin-left: 0px;
+  }
+
+  .achievements-creation .link-button {
+    font-size: 0.9rem;
+    min-width: 250px;
+    line-height: 40px;
+  }
+
+  /* --SP版HR(人事)支援のページ-- */
+
+  .top-area {
+    display: block;
+    text-align: center;
+  }
+
+  .top-area img {
+    width: 100%;
+  }
+
+  .hr-page-text {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .top-area h3 {
+    margin-top: 25px;
+    margin-bottom: 10px;
+  }
+
+  .contents-area {
+    display: block;
+    margin: 30px 0;
+  }
+
+  .contents-area img {
+    width: 80%;
+  }
+
+  .contents-text {
+    max-width: 100%;
+    margin-left: 0;
+  }
+
+  .contents-text h3 {
+    margin-top: 20px;
+    margin-bottom: 0px;
+  }
+
+  .contents-area:nth-child(odd) .contents-text {
+  margin-right: 0;
+  }
+
+  .hr-achievements {
+    margin-left: 10px;
+  }
+
+  .hr-achievements-wrapper {
+    margin: 0 10px;
+  }
+
+  .hr-achievements-wrapper ul li {
+    line-height: 1.8;
+  }
+
+  /* --SP版「映像制作」のページ-- */
+
+  .creation-page-text {
+    width: 100%;
+  }
+
+  .creation-achievements {
+    padding: 30px 0px;
+  }
+
+  .cr-achievements-contents {
+    padding: 10px 0px;
+    gap: 10px;
+  }
+
+  .cr-contents-area {
+    width: 300px;
+    margin: 15px auto;
+  }
+
+  /* --SP版「プロフィール」のページ-- */
+
+  /* SP版 動画エリア */
+
+  .name-area {
+    display: block;
+    width: 500px;
+    max-width: 90%;
+    text-align: center;
+    margin: 40px auto 20px;
+  }
+
+  .name-area iframe {
+    max-width: 500px;
+    width: 100%;
+    height: 240px;
+  }
+
+  .name-area img {
+    margin-left: 0;
+  }
+
+  .profile-text-wrapper {
+    margin-bottom: 50px;
+  }
+
+  .profile-text {
+    font-size: 1.2rem;
+  }
+
+    /* SP版 強みエリア */
+
+  .strength-contents {
+    margin: 0 auto;
+    display: block;
+  }
+
+  .st-contents-area {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .st-contents-area h3::after {
+    width: 200px;
+  }
+
+  .st-contents-area p {
+    font-size: 1.2rem;
+    margin: 30px;
+  }
+
+  /* SP版 得意な環境エリア */
+
+  .environment {
+    padding: 40px 0 40px;
+  }
+
+  .ev-area {
+    display: block;
+    text-align: center;
+  }
+
+  .ev-area p {
+    width: 100%;
+    margin: 20px 0;
+  }
+
+  /* SP版 沿革エリア */
+
+  .timeline-text {
+    max-width: 90%;
+    padding-left: 100px;
+    padding-right: 0px;
+  }
+
+  /* 「線」の擬似要素 */
+  .timeline-text::before {
+    content: '';
+    display: none;
+  }
+
+  /* 「線」の擬似要素
+  .timeline-text::before {
+    content: '';
+    display: block;
+    width: 2px;
+    height: 340px;
+    background-color: #000;
+    position: absolute;
+    top: 0px;
+    left: 69px;
+  }
+  */
+
+  /* ここから「年」と「◯」の擬似要素 */
+  .timeline-text li:first-child::before {
+    content: '2020';
+    background-color: #f5f5f5;
+    position: absolute;
+    left: -80px;
+    font-size: 1.5rem;
+  }
+
+  .timeline-text li:nth-child(2)::before {
+    content: '2022';
+    background-color: #f5f5f5;
+    position: absolute;
+    left: -80px;
+    font-size: 1.5rem;
+  }
+
+  .timeline-text li:nth-child(3)::before {
+    content: '2024';
+    background-color: #f5f5f5;
+    position: absolute;
+    left: -80px;
+    font-size: 1.5rem;
+  }
+  /* 擬似要素おわり */
+
+/* ----SP版フッター---- */
+  .footer-logo {
+    margin-top: 30px;
+  }
+
+
+}

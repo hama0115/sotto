@@ -108,7 +108,7 @@ img {
   margin-right: 20px;
 }
 
-/**********  --メイン--  **********/
+/**********  メイン  **********/
 
 
 /* --トップページのCSS-- */
@@ -122,7 +122,6 @@ img {
   background-size: cover;
 }
 
-/* キャッチフレーズ */
 .catchphrase {
   text-align: center;
   font-size: 2rem;
@@ -144,10 +143,6 @@ img {
   padding: 50px 10px;
 }
 
-.section-work img {
-  width: 350px;
-}
-
 .work-text {
   max-width: 410px;
   margin-left: 40px;
@@ -159,6 +154,11 @@ img {
 .work-text p {
   font-size: 1.5rem;
   margin: 10px 0;
+}
+
+
+.section-work img {
+  width: 350px;
 }
 
 /* リンクボタンの設定(全体) */
@@ -182,10 +182,6 @@ img {
   -webkit-transform: translateY(4px);
   transform: translateY(4px);
   border-bottom: none;
-}
-
-.achievements-creation .link-button {
-  min-width: 350px;
 }
 
 .section-work:nth-child(even) {
@@ -305,9 +301,6 @@ img {
   margin-left: 60px;
 }
 
-.creation-list li:first-child {
-  margin-left: 0px;
-}
 
 /* 4つ目が正方形の画像なので個別で大きさを変更 */
 .creation-list li:nth-child(4) {
@@ -329,16 +322,20 @@ img {
   text-align: center;
 }
 
+.achievements-creation .link-button {
+  min-width: 350px;
+}
+
 /* ----  HR(人事)支援ページ  ---- */
 
 /* 一番上のエリア */
 
-h1 {
+.title {
   text-align: center;
   margin-top: 40px;
 }
 
-h1::after {
+.title::after {
   content: '';
   display: block;
   width: 250px;
@@ -356,19 +353,19 @@ h1::after {
   padding: 30px;
 }
 
-.top-area img {
-  width: 350px;
-}
-
-.hr-page-text {
+.hr-top-text {
   width: 350px;
   display: flex;
   flex-direction: column;
   margin-left: 40px;
 }
 
-.hr-page-text p {
+.hr-top-text p {
   margin: 10px 0;
+}
+
+.top-area img {
+  width: 350px;
 }
 
 /* 仕事内容のエリア */
@@ -436,6 +433,12 @@ h1::after {
   margin: 10px 0;
 }
 
+/* 具体的な実績のエリア */
+
+.hr-achievements {
+  margin-left: 100px;
+}
+
 .hr-achievements h2 {
   position: relative;
 }
@@ -448,12 +451,6 @@ h1::after {
   height: 50px;
   background-color: #98fb98;
   left: -15px;
-}
-
-/* 具体的な実績のエリア */
-
-.hr-achievements {
-  margin-left: 100px;
 }
 
 .hr-achievements h3 {
@@ -470,13 +467,14 @@ h1::after {
 
 /* ----  映像制作のページ  ---- */
 
-.creation-page-text {
+.creation-top-text {
   width: 350px;
   display: flex;
   flex-direction: column;
+  margin-left: 40px;
 }
 
-.creation-page-text {
+.creation-top-text p {
   margin: 10px 0;
 }
 
@@ -528,7 +526,7 @@ margin: 0 auto;
   font-size: 1.2rem;
 }
 
-/* --プロフィールのページ-- */
+/* ----  プロフィールのページ  ---- */
 
 .name-area {
   display: flex;
@@ -695,7 +693,7 @@ margin: 0 auto;
 
 
 
-/* ----  フッター  ---- */
+/**********  フッター  **********/
 
 .footer {
   background-color: #f5f5dc;
@@ -805,19 +803,12 @@ margin: 0 auto;
     margin-left: 0;
   }
 
-
-  /* snsはsp版では非表示 
-  .sns-menu-container {
-    display: none;
-  }
-  */
-
 /* ----  SP版メイン  ---- */
   .main {
     padding-top: 50px;
   }
 
-  /* --SP版トップページ-- */
+  /* --  SP版トップページ  -- */
 
   .first-view {
     height: calc(100vh-50px);
@@ -893,7 +884,7 @@ margin: 0 auto;
     line-height: 40px;
   }
 
-  /* --SP版HR(人事)支援のページ-- */
+  /* --  SP版HR(人事)支援のページ  -- */
 
   .top-area {
     display: block;
@@ -904,7 +895,7 @@ margin: 0 auto;
     width: 100%;
   }
 
-  .hr-page-text {
+  .hr-top-text {
     width: 100%;
     margin: 0 auto;
   }
@@ -949,9 +940,10 @@ margin: 0 auto;
     line-height: 1.8;
   }
 
-  /* --SP版「映像制作」のページ-- */
+  /* --  SP版「映像制作」のページ  -- */
 
-  .creation-page-text {
+  .creation-top-text {
+    margin: 0 auto;
     width: 100%;
   }
 
@@ -969,7 +961,7 @@ margin: 0 auto;
     margin: 15px auto;
   }
 
-  /* --SP版「プロフィール」のページ-- */
+  /* --  SP版「プロフィール」のページ  -- */
 
   /* SP版 動画エリア */
 
@@ -999,7 +991,7 @@ margin: 0 auto;
     font-size: 1.2rem;
   }
 
-    /* SP版 強みエリア */
+  /* SP版 強みエリア */
 
   .strength-contents {
     margin: 0 auto;
@@ -1050,19 +1042,6 @@ margin: 0 auto;
     display: none;
   }
 
-  /* 「線」の擬似要素
-  .timeline-text::before {
-    content: '';
-    display: block;
-    width: 2px;
-    height: 340px;
-    background-color: #000;
-    position: absolute;
-    top: 0px;
-    left: 69px;
-  }
-  */
-
   /* ここから「年」と「◯」の擬似要素 */
   .timeline-text li:first-child::before {
     content: '2020';
@@ -1089,7 +1068,7 @@ margin: 0 auto;
   }
   /* 擬似要素おわり */
 
-/* ----SP版フッター---- */
+/* ----  SP版フッター  ---- */
   .footer-logo {
     margin-top: 30px;
   }
